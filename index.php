@@ -1,4 +1,5 @@
-﻿<?php
+﻿
+<?php
 	session_start();
 	include('inc/db.inc');
 	header('Content-Type: text/html; charset=utf-8');
@@ -7,39 +8,34 @@
 	{
 		$_SESSION["Locations"] = $dao->getLocations(); 
 	}
+?> 
 
-?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/bootsrap.min.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="description" content= "Jämför trafikskolor och körlektioner online. Studera inför trafikprovet med vårt teoriprov baserat på riktiga frågor">
 		<meta name="keywords" content="körkort, trafikskola, trafikskolor, teoriprov, körkortsprov, jämförelse, moped, bil, motorcykel, MC"> 
 		<title>Sveriges Trafikskolor</title>
 	</head>
 	<body>
-		<div id="container">
+		<div class="container">
 			<div id="head">
 				<img src="img/logo.jpg" class="logo" alt="Logo" />
 				<h1 style="float: left;">Sveriges Trafikskolor</h1>
 			</div>
-			<div id="links">
-			<ul id="linkList">
-				<il><a href="index.php">Bil</a></il>
-				<il><a href="Korkortsblanketter.php">Körkortsblanketter</a></il>
-
-<il><a href="syntest.php">Syntest</a></il>
-
-<il><a href="handledarutbildning.php">Handledarutbildning</a></il>
-
-
-
-
-				<!--il><a href="index.php">Moppe</a></il -->
-				<!--il><a href="index.php">MC</a></il -->
-			</ul>
+			<div>
+				<ul>
+					<il><a href="index.php">Bil</a></il>
+					<il><a href="Korkortsblanketter.php">Körkortsblanketter</a></il>
+					<il><a href="syntest.php">Syntest</a></il>
+					<il><a href="handledarutbildning.php">Handledarutbildning</a></il>
+					<!--il><a href="index.php">Moppe</a></il -->
+					<!--il><a href="index.php">MC</a></il -->
+				</ul>
 			</div>
 			<div id="sortAndFilters">
 				<!-- Dynamic content - Start -->
